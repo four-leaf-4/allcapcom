@@ -1,0 +1,300 @@
+@charset "utf-8";
+/*common*/
+html,body{
+	font-size:1em;
+	line-height:1.4;
+	font-family: 'Kosugi Maru', sans-serif;
+	}
+body{
+	background-color:#fff;
+	height:auto;
+	overflow:auto;
+	box-sizing:border-box;
+	counter-reset:num_headline;
+	}
+div{
+	box-sizing:border-box;
+	}
+section{
+	height: auto;
+    overflow: auto;
+	box-sizing:border-box;
+	}
+img{
+	display: block;
+    width: 100%;
+	}
+span.sup{
+	font-size: 0.5em;
+    vertical-align: super;
+	}
+/*common end*/
+/*header and footer start*/
+header,footer{
+    padding: 5px 15px;
+    margin: auto;
+	background-color: #2f333f;
+	}
+header ul,footer ul{
+	list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+	align-items:center;
+    max-width:100%;
+    width: 100%;
+    margin: 0 auto;
+	}
+header li[class^="side_"]{}
+header ul a,
+footer ul a{
+	display: block;
+	}
+header ul .logo_ecap{
+	max-width:220px;
+	width:100%;	
+	}
+footer ul .logo_capcom{
+	max-width:110px;
+	width:100%;
+	}
+header .logo_ecap_yahoo{
+    max-width: 300px;
+    width: 100%;
+}
+header .logo_ecap_rakuten{
+	max-width:200px;
+	width:100%;
+	}
+header ul .btn_twshare{
+	max-width:50px;
+    width:100%;
+	min-width:32px;
+    height:auto;
+	}
+footer{
+	color:#fff;
+	}
+footer .copyright{
+	text-align: right;
+	font-size: 0.5rem;
+	}
+a[href="#totop"]{
+    display: block;
+	transform:translateY(5px) scale(0.9);
+	transition:all 0.4s;
+	}
+a[href="#totop"]:hover{
+	transform:translateY(0px) scale(1.0);
+	}
+.totopbtn_fade{
+	max-width:50px;
+    width: 100%;
+    height: auto;
+	bottom: 1rem;
+    right: 1rem;
+	margin-left: auto;
+	position: fixed;
+	z-index:6;
+	}
+@media screen and (max-width:426px){
+	.totopbtn_fade{
+		}
+	}
+/*header and footer end*/
+/*main start*/
+h1{
+    font-size:1.5rem;
+    text-align:center;
+    padding:4rem 0;
+    background-image:linear-gradient(90deg, rgba(0,76,133,1) 0%,rgba(237,179,44,1) 100%);
+	color: #fff;
+    text-shadow:0px 0px 2px black,1px 1px black,-1px 1px black,1px -1px black,-1px -1px black;
+	}
+h2{
+    max-width: 40em;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 5px;
+    background-color: #ecb32c;
+    background-image: url(../img/bg_allcapcom.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 0% 100%;
+	}
+h3{
+	font-size:1.05rem;
+	}
+h6:before{
+    counter-increment:num_headline;
+    content:"第"counter(num_headline)"章";	
+	}
+a{
+	display:block;
+	text-decoration:none;
+	}
+ul{
+	list-style: none;
+	}
+ul[class^="list_"]{
+    counter-reset: list_num;
+    max-width: 640px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+	}
+ul[class^="list_"] li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	}
+ul[class^="list_"] li:before{
+    counter-increment: list_num;
+    content:"※"counter(list_num);
+	padding: 0 0.5em 0 0;
+	}
+.spec table{
+	width: auto;
+    table-layout: fixed;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    line-height: 2;
+	}
+.spec th{
+	width:7em;
+	}
+.spec td{
+	display:flex;
+	width:20em;
+	}
+.spec td:before{
+	content:"：";
+	display:block;
+	}
+/*main end*/
+section.top{
+	max-width:980px;
+	width:100%;
+	margin:auto;	
+	}
+.top_visual{
+	max-width:980px;
+	width:100%;
+	margin:auto;
+	}
+.top_headline{
+	background-image:url(../img/bg_navi.jpg);
+	background-size:cover;
+	background-repeat:norepeat;
+	background-position:center;
+	max-width:980px;
+	width:100%;
+	margin:auto;
+	}
+.catchcopy{
+	max-width: 40em;
+    width: 100%;
+    margin:2rem auto 0;
+	background-image:linear-gradient(90deg, rgba(0,76,133,1) 0%,rgba(237,179,44,1) 100%);
+	padding:5px;
+	border-radius:10px;
+	}
+.catchcopy_txt{
+	background-color:#fff;
+	border-radius:10px;
+	padding: 1rem;
+	}
+.nav_allcapcom{
+	margin:4rem 0;
+	}
+.nav_buttoms{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	max-width:640px;
+	width:100%;
+	margin: auto;
+	justify-content:space-around;
+	}
+.nav_btn{
+	max-width:200px;
+    width:100%;
+    margin:0.25rem;
+	border:2px dotted blue;
+	transition:border 0.3s;
+	overflow:hidden;
+	}
+.nav_btn:hover{
+	border:2px solid yellow;
+	}
+.nav_btn:hover img{
+	transform:scale(1.1);
+	}
+[class^="title_"]{
+    padding: 4rem 0;
+	}
+[class^="logo_"]{
+	max-width:500px;
+	width:100%;
+	margin:auto;
+	}
+.about_txt{
+	max-width: 35em;
+    width: 100%;
+    margin: auto;
+    padding:2rem 1rem;
+	box-sizing: border-box;
+	}
+.lineup_goods{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	max-width:800px;
+	width:100%;
+	margin: auto;
+	justify-content:space-around;
+    perspective:1200px;
+	}
+.goods_btn{
+    width:100%;
+	margin: 1rem 0.25rem;
+	/*background-image:linear-gradient(90deg, rgba(0,76,133,1) 0%,rgba(237,179,44,1) 100%);*/
+	/*box-shadow: 0 0 1px 1px #efefef;*/
+	}
+.goods_btn.big{
+	max-width:750px;
+	}
+.goods_btn.small{
+	max-width:300px;
+	}
+.goods_pic{
+    position: relative;
+	}
+.goods_pic:after{
+	content:"今すぐチェック▶";
+	display:block;
+    text-align: center;
+    font-size: 0.5rem;
+    background-color: navy;
+    max-width: 12em;
+    width: 100%;
+    margin:0.5rem auto 0;
+    color: #fff;
+    padding: 0 0.5rem;
+    border: inset 4px blue;
+	}
+.goods_pic figcaption{
+	display:none;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+	color:#fff;
+    text-shadow: 0px 0px 4px black, 1px 1px 0px black, -1px 1px 0px black, 1px -1px 0px black, -1px -1px 0px black;
+	}
